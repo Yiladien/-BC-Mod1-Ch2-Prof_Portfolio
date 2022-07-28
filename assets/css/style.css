@@ -64,7 +64,7 @@
         text-align: right;
         border-top-right-radius: 15px 15px; 
         border-bottom-right-radius: 15px 15px;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
     }
 
     h3 {
@@ -76,9 +76,8 @@
         padding: 0px 10px 10px 100px;
         font-weight: bold;
         border-right: 4px solid var(--header-color);
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        min-width: 250px;
-        flex-basis: 0;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+        flex: 0 0 250px;
     }
 /* END BROAD STYLES */
 
@@ -92,6 +91,7 @@
         padding: 20px 35px 20px 0px;
         align-items: center;
         flex-wrap: wrap;
+        z-index: 9999;
     }
     
     header h1 {
@@ -117,10 +117,10 @@
     }
 
     header nav ul li a {
-        padding: 10px 5px;
+        padding: 10px 10px;
         font-weight: lighter;
         font-size: 1.55vw;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
     }
 
     header span {
@@ -134,14 +134,15 @@
 /* HERO */
     .hero {
         background-image: url("../images/hero-img.jpg");
-        background-size: cover;
+        background-size: auto;
         background-attachment: relative;
-        background-position: 0px -420px;
+        background-position: 0px -620px;
         position: relative;
         min-height: 200px;
+        align-items: center;
     }
 
-    .hero div {
+    .hero h2 {
         position: absolute;
         bottom: 20px;
         right: 60px;
@@ -151,20 +152,27 @@
         border-radius: 10px 10px;
     }
 
-    .hero img {
-        height: 100px;
-        width: 100px;
+    #profile-pic {
+        background-image: url("../images/IMG_8284-updated1.jpg");
+        background-position: -25px 0px;
+        background-size: 140%;
+        background-attachment: relative;
+        margin: 10px 20px;
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
     }
 /* END HERO */
 
 
 /* ABOUT ME */
     #about-me {
-        min-height: 200px;
+        flex: 1 1 200px;
     }
 
-    #about-me p {
+    #about-me div {
         padding: 0px 25px 10px 25px;
+        flex: 0 1 900px;
     }
 
 /* END ABOUT ME */
@@ -172,46 +180,34 @@
 
 /* WORK */
 
-
-    /* .tiles {
-        flex-direction: column;
-        flex: 1;
-
-    } */
     .tiles {
         border: 3px solid var(--header-bg-color);
         text-decoration: none;
         color: var(--header-color);
         /* padding: 0px 20px 0px 20px; */
         margin: 10px;
-        min-width: 200px;
-        min-height: 200px;
-        flex-shrink: 0;        
-        justify-content: space-between;
-        /* flex: 1; */
+        flex: 0 1 900px;
     }
+
     .big-tile {        
-        max-width: 300px;
-        max-height: 300px;
-        min-width: 300px;
-        min-height: 300px;
-        flex: 1;
+        flex: 1 1 auto;
         margin: 5px auto;
     }
 
     .small-tiles {
         display: flex;
-        flex: 1;
+        flex: 1 1 auto;
         flex-wrap: wrap;
-        flex-shrink: 0;
         margin: 5px auto;
     }
 
-
+    .tile {
+        flex: 1 0 200px;
+    }
 
     .small-tiles {
         background-size: cover;
-        position: fixed;
+        background-position: fixed;
     }
 
     /* .tile-title {
@@ -265,6 +261,8 @@
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
+        text-align: center;
+        flex: 1 1 900px;
     }
 
     .contact-info div {
@@ -278,8 +276,10 @@
     }
 
     .contact-info span {
-        padding: 0 10px;
-        border-bottom: 3px solid var(--header-color);
+        font-size: 1.55vw;
+        padding: 0 5px;
+        border-bottom: 2px solid var(--header-color);
+        flex: 1 1 900px;
     }
 
 /* END FOOTER */
@@ -300,12 +300,12 @@
     min-height: 400px;
 }
 
-header nav ul li a:hover {
+footer a:hover, header nav ul li a:hover {
     color: var(--font-color);
     
 }
 
-header span:hover {
+footer span:hover, header span:hover {
     border-color: var(--font-color);
 }
 
@@ -316,17 +316,29 @@ header span:hover {
     header {
       padding-bottom: 0;
       justify-content: center;
-      position: relative;
+      /* position: relative; */
+      padding: 0px;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0px;
     }
   
-    header h1 {
+    header h1 { 
+      padding: 0px;
       width: 100%;
       text-align: center;
+      border-radius: 0%;
+      flex: 1 1 auto;
+    }
+
+    h2 {
+        font-size: 20px;
     }
 
     h3 {
-        min-width: 125px;
+        flex: 0 0 100px;
         padding-left: 5px;
+        font-size: 20px;
     }
   
     header nav ul {
@@ -343,5 +355,64 @@ header span:hover {
       text-align: center;
       width: 100%;
     }
+
+    .contact-info span {
+        font-size: 20px;
+    }
 }
+
+
+@media screen and (max-width: 575px) {
+    header h1 { 
+        font-size: 24px;
+      }
+
+    header nav ul {
+        margin: 5px 0px 0px 0px;
+      }
+    
+    header nav ul li a {
+      font-size: 14px;
+    }
+
+    header span {
+        padding: 0px 5px;
+        border-width: 2px;
+    }
+
+    #profile-pic {
+        height: 100px;
+        width: 100px;
+    }
+
+    .hero {
+        background-position: -500px -700px;
+        background-size: 125%;
+    }
+
+    .hero h2 {
+        font-size: 12px;
+        right: 20px;
+    }
+
+    h3 {
+        flex: 0 0 100px;
+        padding-left: 5px;
+        font-size: 20px;
+        border-right-style: none;
+        border-bottom-style: solid;
+        flex: 1;
+        text-align: center;
+        margin: 15px;
+    }
+
+    section, footer {
+        flex-wrap: wrap;
+    }
+
+    .contact-info span {
+        font-size: 16px;
+    }
+
+
     /* END RESPONSIVE */
