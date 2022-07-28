@@ -150,6 +150,11 @@
     .hero h2 {
         border-radius: 10px 10px;
     }
+
+    .hero img {
+        height: 100px;
+        width: 100px;
+    }
 /* END HERO */
 
 
@@ -168,43 +173,52 @@
 /* WORK */
 
 
-    .tiles {
+    /* .tiles {
         flex-direction: column;
         flex: 1;
 
+    } */
+    .tiles {
+        border: 3px solid var(--header-bg-color);
+        text-decoration: none;
+        color: var(--header-color);
+        /* padding: 0px 20px 0px 20px; */
+        margin: 10px;
+        min-width: 200px;
+        min-height: 200px;
+        flex-shrink: 0;        
+        justify-content: space-between;
+        /* flex: 1; */
     }
-
     .big-tile {        
-        min-width: 600px;
-        min-height: 600px;
+        max-width: 300px;
+        max-height: 300px;
+        min-width: 300px;
+        min-height: 300px;
         flex: 1;
+        margin: 5px auto;
     }
 
     .small-tiles {
         display: flex;
         flex: 1;
         flex-wrap: wrap;
+        flex-shrink: 0;
+        margin: 5px auto;
     }
 
-    .small-tiles a {
-        border: 3px solid var(--header-bg-color);
-        text-decoration: none;
-        color: var(--header-color);
-        min-width: 200px;
-        min-height: 200px;
-        flex: 1;
-    }
+
 
     .small-tiles {
         background-size: cover;
         position: fixed;
     }
 
-    .tile-title {
+    /* .tile-title {
         position: relative;
         bottom: 10px;
         left: 0px;
-    }
+    } */
 
 
     #tile01 {
@@ -246,7 +260,27 @@
 
 
 /* FOOTER */
-    
+    .contact-info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .contact-info div {
+        flex: 1 0 auto;
+        padding: 10px 20px;
+    }
+
+    .contact-info a {
+        text-decoration: none;
+        color: var(--header-color);
+    }
+
+    .contact-info span {
+        padding: 0 10px;
+        border-bottom: 3px solid var(--header-color);
+    }
 
 /* END FOOTER */
 
@@ -256,3 +290,57 @@
 
 
 /* END UTILITY */
+
+
+/* hover */
+.big-tile:hover {
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 400px;
+    min-height: 400px;
+}
+
+header nav ul li a:hover {
+    color: var(--font-color);
+    
+}
+
+header span:hover {
+    border-color: var(--font-color);
+}
+
+/* hover */
+
+/* RESPONSIVE*/
+@media screen and (max-width: 980px) {
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+    }
+  
+    header h1 {
+      width: 100%;
+      text-align: center;
+    }
+
+    h3 {
+        min-width: 125px;
+        padding-left: 5px;
+    }
+  
+    header nav ul {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    header nav ul li a {
+      font-size: 20px;
+    }
+  
+    footer h2, footer div {
+      text-align: center;
+      width: 100%;
+    }
+    /* END RESPONSIVE */
