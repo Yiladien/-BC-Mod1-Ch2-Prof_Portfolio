@@ -181,17 +181,15 @@
 /* WORK */
 
     .tiles {
-        border: 3px solid var(--header-bg-color);
         text-decoration: none;
         color: var(--header-color);
-        /* padding: 0px 20px 0px 20px; */
-        margin: 10px;
         flex: 0 1 900px;
     }
 
-    .big-tile {        
-        flex: 1 1 auto;
-        margin: 5px auto;
+    .big-tile {
+        flex: 0 1 300px;
+        margin: 0px 0px 10px 10px;
+        border: 3px solid var(--font-color);
     }
 
     .small-tiles {
@@ -210,45 +208,41 @@
         background-position: fixed;
     }
 
-    /* .tile-title {
-        position: relative;
-        bottom: 10px;
-        left: 0px;
-    } */
 
 
-    #tile01 {
-        background-image: url("../images/tile01-Surf-Report.jpg");
-        background-position: -50px 0px;
-        /* min-height: 200px;
-        min-width: 200px; */
+    #tile01 img {
+        flex: 0 1 400px;
+        object-fit:cover;
+        width: 100%;
+        height: 350px;
+        object-position: 0% 40%;
     }
     
-    #tile02 {
-        background-image: url("../images/tile02-LED-Wall.jpg");
-        background-position: -50px 0px;
-        /* min-height: 200px;
-        min-width: 200px; */
+    #tile02 img {
+        flex: 0 1 300px;
+        object-fit:cover;
+        width: 100%;
+        height: 150px;
     }
-    #tile03 {
-        background-image: url("../images/tile03-Calculator.jpg");
-        background-position: -50px 0px;
-        /* min-height: 200px;
-        min-width: 200px; */
-    }
-
-    #tile04 {
-        background-image: url("../images/tile04-Horiseon.png");
-        background-position: -50px 0px;
-        /* min-height: 200px;
-        min-width: 200px; */
+    #tile03 img {
+        flex: 0 1 200px;
+        object-fit:cover;
+        width: 100%;
+        height: 150px;
     }
 
-    #tile05 {
-        background-image: url("../images/tile05-Run-Buddy.png");
-        background-position: -50px 0px;
-        /* min-height: 200px;
-        min-width: 200px; */
+    #tile04 img {
+        flex: 0 1 200px;
+        object-fit:cover;
+        width: 100%;
+        height: 150px;
+    }
+
+    #tile05 img {
+        flex: 0 1 200px;
+        object-fit:cover;
+        width: 100%;
+        height: 150px;
     }
 
 /* END WORK */
@@ -294,10 +288,7 @@
 
 /* hover */
 .big-tile:hover {
-    max-width: 400px;
-    max-height: 400px;
-    min-width: 400px;
-    min-height: 400px;
+
 }
 
 footer a:hover, header nav ul li a:hover {
@@ -417,4 +408,3 @@ footer span:hover, header span:hover {
 
     /* END RESPONSIVE */
 
-    
