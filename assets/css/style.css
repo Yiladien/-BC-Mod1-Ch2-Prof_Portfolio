@@ -50,12 +50,10 @@ footer {
   padding: 20px 10px;
 }
 
-/* .tiles {
-        margin: 10px 20px;
-    } */
-
 h1,
-h2 {
+h2,
+.big-tile-name,
+.small-tile-name {
   color: var(--header-color);
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
@@ -80,6 +78,7 @@ h3 {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
   flex: 0 0 250px;
 }
+
 /* END BROAD STYLES */
 
 /* HEADER */
@@ -134,9 +133,10 @@ header span {
   background-image: url("../images/hero-img.jpg");
   background-size: auto;
   background-attachment: relative;
-  background-position: 0px -620px;
+  background-position: 0px -740px;
   position: relative;
-  min-height: 200px;
+  padding: 50px 0px;
+  /* min-height: 200px; */
   align-items: center;
 }
 
@@ -179,68 +179,90 @@ header span {
 .tiles {
   display: flex;
   flex-wrap: wrap;
-  text-decoration: none;
   color: var(--header-color);
   flex: 0 1 900px;
   justify-content: space-around;
 }
 
+.tiles a {
+  text-decoration: none;
+}
+
+.big-tile-name {
+  padding: 10px 10px 10px 30px;
+}
+
+.big-tile-name h4 {
+  font-size: 26px;
+}
+
+.big-tile-name span {
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+  text-shadow: none;
+}
+
 .big-tile {
-  flex: 0 1 300px;
   margin: 0px 0px 10px 10px;
   border: 3px solid var(--font-color);
   flex: 1 100%;
+  display: flex;
+  background-size: cover;
+  /* background-position: 000px -0px; */
+  padding-top: 400px;
+  padding-bottom: 20px;
+  /* background-attachment: relative; */
 }
 
 .small-tiles {
+  border: 3px solid var(--font-color);
   display: flex;
   flex: 1 1 auto;
   flex-wrap: wrap;
-  margin: 5px auto;
+  margin: 0px 0px 0px 10px;
+}
+
+.small-tile-name {
+  padding: 3px 10px 3px 20px;
+}
+
+.small-tile-name h4 {
+  font-size: 18px;
+}
+
+.small-tile-name span {
+  color: black;
+  font-size: 12px;
+  font-weight: normal;
+  text-shadow: none;
 }
 
 .tile {
   flex: 1 0 200px;
-}
-
-.small-tiles {
+  display: flex;
   background-size: cover;
-  background-position: fixed;
+  padding-top: 75px;
+  padding-bottom: 10px;
 }
 
-#tile01 img {
-  flex: 0 1 400px;
-  object-fit: cover;
-  width: 100%;
-  height: 350px;
-  object-position: 0% 40%;
+#tile01 {
+  background-image: url("../images/tile01-Surf-Report.jpg");
 }
 
-#tile02 img {
-  flex: 0 1 300px;
-  object-fit: cover;
-  width: 100%;
-  height: 150px;
+#tile02 {
+  background-image: url("../images//tile02-LED-Wall.jpg");
 }
-#tile03 img {
-  flex: 0 1 200px;
-  object-fit: cover;
-  width: 100%;
-  height: 150px;
+#tile03 {
+  background-image: url("../images/2022-08-31_23-57-07.jpg");
 }
 
-#tile04 img {
-  flex: 0 1 200px;
-  object-fit: cover;
-  width: 100%;
-  height: 150px;
+#tile04 {
+  background-image: url("../images/tile04-Horiseon.png");
 }
 
-#tile05 img {
-  flex: 0 1 200px;
-  object-fit: cover;
-  width: 100%;
-  height: 150px;
+#tile05 {
+  background-image: url("../images/tile05-Run-Buddy.png");
 }
 
 /* END WORK */
@@ -279,7 +301,12 @@ header span {
 /* END UTILITY */
 
 /* hover */
-.big-tile:hover {
+.big-tile-name:hover {
+  padding: 10px 10px 10px 70px;
+}
+
+.small-tile-name:hover {
+  padding: 3px 10px 3px 40px;
 }
 
 footer a:hover,
@@ -334,6 +361,11 @@ header span:hover {
     font-size: 20px;
   }
 
+  .hero {
+    background-image: url("../images/hero-img-med.jpg");
+    background-position: 0px -400px;
+  }
+
   footer h2,
   footer div {
     text-align: center;
@@ -368,11 +400,6 @@ header span:hover {
     width: 100px;
   }
 
-  .hero {
-    background-position: -500px -700px;
-    background-size: 125%;
-  }
-
   .hero h2 {
     font-size: 12px;
     right: 20px;
@@ -387,6 +414,11 @@ header span:hover {
     flex: 1;
     text-align: center;
     margin: 15px;
+  }
+
+  .hero {
+    background-image: url("../images/hero-img-med.jpg");
+    background-position: 0px -450px;
   }
 
   section,
